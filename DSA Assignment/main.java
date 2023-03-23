@@ -1,214 +1,346 @@
 package assignment.dsa;
-
-import java.util.Iterator;
+import java.util.Scanner;
 import java.util.Comparator;
 
 public class main {
-
-	public static void main(String[]args) throws Exception {
-//		LinkedList<String> list = new LinkedList<String>();
-//		        
-//		        // Insert elements
-//		        list.insert("apple");
-//		        list.insert("banana");
-//		        list.insert("orange");
-//		        list.insert("grape");
-//		        list.insert("kiwi");
-//		        
-//		        // Insert at position
-//		        list.insertAt(3, "pear");
-//		        
-//		        // Print out elements
-//		        System.out.println("Elements in the list:");
-//		        list.traverse();
-//		        
-//		        // Delete element
-//		        list.delete("banana");
-//		        
-//		        // Delete at position
-//		        list.deleteAt(4);
-//		        
-//		        // Print out elements
-//		        System.out.println("Elements in the list after deletions:");
-//		        list.traverse();
-//		        
-//		        // Print out size of list
-//		        System.out.println("Size of the list: " + list.size());
-//		        
-//		        // Print out center element
-//		        System.out.println("Center element: " + list.center());
-//		        
-//		        // Reverse the list
-//		        list.reverse();
-//		        System.out.println("Elements in the list after reversal:");
-//		        list.traverse();
-//		        
-//		        // Sort the list
-//		        list.sort();
-//		        System.out.println("Elements in the list after sorting:");
-//		        list.traverse();
-//		        
-//		        // Iterate over the list using an iterator
-//		        System.out.println("Elements in the list using an iterator:");
-//		        Iterator<String> iterator = list.iterator();
-//		        while (iterator.hasNext()) {
-//		            System.out.print(iterator.next() + " ");
-//		        }
-//		        System.out.println();
-//		Stack<String> stack = new Stack<String>();
-//
-//        // Push some elements onto the stack
-//        stack.push("apple");
-//        stack.push("banana");
-//        stack.push("cherry");
-//        stack.push("date");
-//        stack.push("elderberry");
-//
-//        // Print the elements of the stack
-//        System.out.print("Stack: ");
-//        stack.print();
-//
-//        // Pop an element from the stack
-//        String poppedElement = stack.pop();
-//        System.out.println("Popped element: " + poppedElement);
-//
-//        // Peek at the top element of the stack
-//        String topElement = stack.peek();
-//        System.out.println("Top element: " + topElement);
-//
-//        // Check if the stack contains a specific element
-//        boolean containsElement = stack.contains("banana");
-//        System.out.println("Contains 'banana'? " + containsElement);
-//
-//        // Get the size of the stack
-//        int stackSize = stack.size();
-//        System.out.println("Stack size: " + stackSize);
-//
-//        // Get the center element of the stack
-//        String centerElement = stack.center();
-//        System.out.println("Center element: " + centerElement);
-//
-//        // Sort the stack
-//        stack.sort();
-//        System.out.print("Sorted stack: ");
-//        stack.print();
-//
-//        // Reverse the stack
-//        stack.reverse();
-//        System.out.print("Reversed stack: ");
-//        stack.print();
-//
-//        // Use an iterator to traverse the stack
-//        System.out.print("Stack using iterator: ");
-//        for (String element : stack) {System.out.print(element + " ");
-//        }
-//        System.out.println();
-		
-
-        // create a new queue
-//        Queue<Integer> queue = new Queue<>();
-//
-//        // add some elements to the queue
-//        queue.enqueue(3);
-//        queue.enqueue(1);
-//        queue.enqueue(4);
-//        queue.enqueue(1);
-//        queue.enqueue(5);
-//
-//        // print the queue using the traverse() method
-//        queue.traverse(); // prints "3 1 4 1 5"
-//
-//        // sort the queue using the sort() method
-//        queue.sort();
-//
-//        // print the sorted queue
-//        queue.traverse(); // prints "1 1 3 4 5"
-//
-//        // reverse the queue using the reverse() method
-//        queue.reverse();
-//
-//        // print the reversed queue
-//        queue.traverse(); // prints "5 4 3 1 1"
-//
-//        // print the size of the queue using the size() method
-//        System.out.println("Size of queue: " + queue.size()); // prints "Size of queue: 5"
-//
-//        // check if the queue contains a specific element using the contains() method
-//        System.out.println("Queue contains 4: " + queue.contains(4)); // prints "Queue contains 4: true"
-//
-//        // get the element at the center of the queue using the center() method
-//        System.out.println("Element at center of queue: " + queue.center()); // prints "Element at center of queue: 3
-//		
-		// Create a priority queue of strings sorted in descending order
-//        PriorityQueue<String> pq = new PriorityQueue<String>(new Comparator<String>() {
-//            public int compare(String s1, String s2) {
-//                return s2.compareTo(s1);
+    
+    public static void main(String[] args) {
+//        
+//        Scanner scanner = new Scanner(System.in);
+//        LinkedList<Integer> list = new LinkedList<Integer>();
+//        
+//        int choice, data, position;
+//        boolean loop = true;
+//        
+//        while (loop) {
+//            
+//            System.out.println("1. Insert at end");
+//            System.out.println("2. Insert at position");
+//            System.out.println("3. Delete at position");
+//            System.out.println("4. Find center element");
+//            System.out.println("5. Sort the elements");
+//            System.out.println("6. Reverse the elements");
+//            System.out.println("7. Print the elements");
+//            System.out.println("8. Exit");
+//            
+//            System.out.println("Enter your choice:");
+//            choice = scanner.nextInt();
+//            
+//            switch (choice) {
+//                
+//                case 1:
+//                    System.out.println("Enter data:");
+//                    data = scanner.nextInt();
+//                    list.insert(data);
+//                    list.traverse();
+//                    break;
+//                
+//                case 2:
+//                    System.out.println("Enter position:");
+//                    position = scanner.nextInt();
+//                    System.out.println("Enter data:");
+//                    data = scanner.nextInt();
+//                    list.insertAt(position, data);
+//                    list.traverse();
+//                    break;
+//             
+//                
+//                case 3:
+//                    System.out.println("Enter position:");
+//                    position = scanner.nextInt();
+//                    list.deleteAt(position);
+//                    list.traverse();
+//                    break;
+//                    
+//                case 4:
+//                    System.out.println("Center element: " + list.center());
+//                    break;
+//                    
+//                case 5:
+//                    list.sort();
+//                    list.traverse();
+//                    break;
+//                    
+//                case 6:
+//                    list.reverse();
+//                    list.traverse();
+//                    break;
+//                    
+//                case 7:
+//                    System.out.println("Elements:");
+//                    list.traverse();
+//                    break;
+//                    
+//                case 8:
+//                    loop = false;
+//                    break;
+//                    
+//                default:
+//                    System.out.println("Invalid choice!");
+//                    break;
 //            }
-//        });
-//        
-//        // Enqueue some strings
-//        pq.enqueue("cat");
-//        pq.enqueue("dog");
-//        pq.enqueue("bird");
-//        pq.enqueue("elephant");
-//        pq.enqueue("zebra");
-//        
-//        // Print the contents of the priority queue
-//        pq.traverse();
-//        
-//        // Dequeue and print the strings
-//        while (pq.size() > 0) {
-//            System.out.println(pq.dequeue());
+//            
 //        }
-		
-		// Create a new hash table with a capacity of 8
-        HashTable<String, Integer> table = new HashTable<>(8);
-        
-        
-        table.put("apple", 1);
-        table.put("banana", 2);
-        table.put("cherry", 3);
-        table.put("date", 4);
-        table.put("elderberry", 5);
-        
-        // Print the size of the hash table
-        System.out.println("Size: " + table.size()); // Output: Size: 5
-        
-        // Check if the hash table contains a key
-        System.out.println("Contains key 'banana': " + table.containsKey("banana")); // Output: Contains key 'banana': true
-        
-        // Get the value for a key
-        System.out.println("Value for key 'date': " + table.get("date")); // Output: Value for key 'date': 4
-        
-        // Remove a key-value pair from the hash table
-        table.remove("cherry");
-        
-        // Print the remaining keys and values in the hash table
-        System.out.println("Keys and values:");
-        table.traverse();
-        /*
-        Output:
-        Keys and values:
-        banana: 2
-        date: 4
-        elderberry: 5
-        apple: 1
-        */
-        
-        // Iterate over the keys in the hash table
-        System.out.println("Keys:");
-        for (String key : table.keys()) {
-            System.out.println(key);
+//        
+//        scanner.close();
+//  --------------------------------------------------------------------------------------------------------------------  	
+//   	 Stack<Integer> stack = new Stack<Integer>();
+//         Scanner scanner = new Scanner(System.in);
+//         while (true) {
+//             System.out.println("Enter a command: push, pop, peek, contains, size, center, sort, reverse, print, or quit");
+//             String command = scanner.next();
+//             try {
+//                 if (command.equals("push")) {
+//                     System.out.println("Enter an integer to push onto the stack:");
+//                     int data = scanner.nextInt();
+//                     stack.push(data);
+//                     System.out.println("Pushed " + data + " onto the stack");
+//                     stack.print();
+//                 } else if (command.equals("pop")) {
+//                     int data = stack.pop();
+//                     System.out.println("Popped " + data + " from the stack");
+//                     stack.print();
+//                 } else if (command.equals("peek")) {
+//                     int data = stack.peek();
+//                     System.out.println("The top of the stack contains " + data);
+//                     stack.print();
+//                 } else if (command.equals("contains")) {
+//                     System.out.println("Enter an integer to check if it's in the stack:");
+//                     int data = scanner.nextInt();
+//                     boolean contains = stack.contains(data);
+//                     if (contains) {
+//                         System.out.println(data + " is in the stack");
+//                         stack.print();
+//                     } else {
+//                         System.out.println(data + " is not in the stack");
+//                         stack.print();
+//                     }
+//                 } else if (command.equals("size")) {
+//                     int size = stack.size();
+//                     System.out.println("The stack has " + size + " elements");
+//                     stack.print();
+//                 } else if (command.equals("center")) {
+//                     int center = stack.center();
+//                     System.out.println("The center of the stack is " + center);
+//                 } else if (command.equals("sort")) {
+//                     stack.sort();
+//                     stack.print();
+//                     System.out.println("Sorted the stack");
+//                 } else if (command.equals("reverse")) {
+//                     stack.reverse();
+//                     System.out.println("Reversed the stack");
+//                     stack.print();
+//                 } else if (command.equals("print")) {
+//                     stack.print();
+//                 } else if (command.equals("quit")) {
+//                     break;
+//                 } else {
+//                     System.out.println("Invalid command");
+//                 }
+//             } catch (Exception e) {
+//                 System.out.println(e.getMessage());
+//             }
+//         }
+//         scanner.close();
+//   ------------------------------------------------------------------------------------------------------------------------
+    	
+//   
+//    	        Queue<Integer> queue = new Queue<>();
+//    	        Scanner scanner = new Scanner(System.in);
+//
+//    	        while (true) {
+//    	            System.out.println("Choose an operation:");
+//    	            System.out.println("1. Enqueue");
+//    	            System.out.println("2. Dequeue");
+//    	            System.out.println("3. Peek");
+//    	            System.out.println("4. Sort");
+//    	            System.out.println("5. Reverse");
+//    	            System.out.println("6. Traverse");
+//    	            System.out.println("7. Quit");
+//
+//    	            int choice = scanner.nextInt();
+//
+//    	            switch (choice) {
+//    	                case 1:
+//    	                    System.out.println("Enter value to enqueue:");
+//    	                    int value = scanner.nextInt();
+//    	                    queue.enqueue(value);
+//    	                    System.out.println(value + " enqueued.");
+//    	                    queue.traverse();
+//    	                    break;
+//    	                case 2:
+//    	                    try {
+//    	                        int dequeued = queue.dequeue();
+//    	                        queue.traverse();
+//    	                        System.out.println(dequeued + " dequeued.");
+//    	                    } catch (Exception e) {
+//    	                        System.out.println(e.getMessage());
+//    	                    }
+//    	                    break;
+//    	                case 3:
+//    	                    try {
+//    	                        int peeked = queue.peek();
+//    	                        queue.traverse();
+//    	                        System.out.println("Peeked: " + peeked);
+//    	                    } catch (Exception e) {
+//    	                        System.out.println(e.getMessage());
+//    	                    }
+//    	                    break;
+//    	                case 4:
+//    	                    queue.sort();
+//    	                    System.out.println("Sorted.");
+//    	                    queue.traverse();
+//    	                    break;
+//    	                case 5:
+//    	                    queue.reverse();
+//    	                    System.out.println("Reversed.");
+//    	                    queue.traverse();
+//    	                    break;
+//    	                case 6:
+//    	                    queue.traverse();
+//    	                    break;
+//    	                case 7:
+//    	                    System.exit(0);
+//    	                default:
+//    	                    System.out.println("Invalid choice.");
+//    	            }
+//    	        }
+//    	    ---------------------------------------------------------------------------------------------------
+//    	
+//    	PriorityQueue<Integer> priorityQueue = new PriorityQueue<Integer>();
+//    	Scanner scanner = new Scanner(System.in);
+//
+//        boolean quit = false;
+//        while (!quit) {
+//            System.out.println("Enter 1 to add element");
+//            System.out.println("Enter 2 to remove element");
+//            System.out.println("Enter 3 to view the front element");
+//            System.out.println("Enter 4 to check if an element is present");
+//            System.out.println("Enter 5 to view the number of elements");
+//            System.out.println("Enter 6 to reverse the queue");
+//            System.out.println("Enter 7 to view the queue");
+//            System.out.println("Enter 8 to quit");
+//
+//            int choice = scanner.nextInt();
+//
+//            switch (choice) {
+//                case 1:
+//                    System.out.println("Enter element to add: ");
+//                    int element = scanner.nextInt();
+//                    priorityQueue.enqueue(element);
+//                    System.out.println("Element " + element + " added");
+//                    priorityQueue.traverse();
+//                    break;
+//                case 2:
+//                    if (priorityQueue.size() == 0) {
+//                        System.out.println("Queue is empty");
+//                    } else {
+//                        System.out.println("Removed element: " + priorityQueue.dequeue());
+//                        priorityQueue.traverse();
+//                    }
+//                    break;
+//                case 3:
+//                    if (priorityQueue.size() == 0) {
+//                        System.out.println("Queue is empty");
+//                    } else {
+//                    	priorityQueue.traverse();
+//                        System.out.println("Front element: " + priorityQueue.peek());
+//                    }
+//                    break;
+//                case 4:
+//                    System.out.println("Enter element to check: ");
+//                    element = scanner.nextInt();
+//                    if (priorityQueue.contains(element)) {
+//                    	priorityQueue.traverse();
+//                        System.out.println("Element " + element + " is present");
+//                    } else {
+//                    	priorityQueue.traverse();
+//                        System.out.println("Element " + element + " is not present");
+//                    }
+//                    break;
+//                case 5:
+//                    System.out.println("Number of elements: " + priorityQueue.size());
+//                    priorityQueue.traverse();
+//                    break;
+//                case 6:
+//                    priorityQueue.reverse();
+//                    System.out.println("Queue reversed");
+//                    priorityQueue.traverse();
+//                    break;
+//                case 7:
+//                    System.out.print("Queue: ");
+//                    priorityQueue.traverse();
+//                    break;
+//                case 8:
+//                    quit = true;
+//                    break;
+//                default:
+//                    System.out.println("Invalid choice");
+//                    break;
+//            }
+//        }
+//
+//        scanner.close();
+//    	-----------------------------------------------------------------------------
+    	
+    	HashTable<String, Integer> hashtable = new HashTable<>();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Enter a command (put, get, remove, containsKey, size, traverse, exit):");
+            String command = scanner.nextLine().trim();
+
+            if (command.equals("put")) {
+                System.out.println("Enter a key:");
+                String key = scanner.nextLine().trim();
+                System.out.println("Enter a value:");
+                int value = Integer.parseInt(scanner.nextLine().trim());
+                hashtable.put(key, value);
+                System.out.println("Key-value pair added to the hashtable.");
+
+            } else if (command.equals("get")) {
+                System.out.println("Enter a key:");
+                String key = scanner.nextLine().trim();
+                Integer value = hashtable.get(key);
+                if (value == null) {
+                    System.out.println("No value found for the key.");
+                } else {
+                    System.out.println("Value for the key: " + value);
+                }
+
+            } else if (command.equals("remove")) {
+                System.out.println("Enter a key:");
+                String key = scanner.nextLine().trim();
+                hashtable.remove(key);
+                System.out.println("Key-value pair removed from the hashtable.");
+                hashtable.traverse();
+
+            } else if (command.equals("containsKey")) {
+                System.out.println("Enter a key:");
+                String key = scanner.nextLine().trim();
+                boolean contains = hashtable.containsKey(key);
+                System.out.println("Hashtable contains the key: " + contains);
+                hashtable.traverse();
+
+            } else if (command.equals("size")) {
+                System.out.println("Hashtable size: " + hashtable.size());
+                hashtable.traverse();
+
+            } else if (command.equals("traverse")) {
+                System.out.println("Hashtable content:");
+                hashtable.traverse();
+
+            } else if (command.equals("exit")) {
+                break;
+
+            } else {
+                System.out.println("Invalid command, try again.");
+            }
         }
-        /*
-        Output:
-        banana
-        date
-        elderberry
-        apple
-        */
-		
 
-		    }
-
+        System.out.println("Exiting program.");
+    	
+    	
+   }
+    
 }
