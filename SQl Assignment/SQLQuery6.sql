@@ -1,5 +1,5 @@
 GO
-CREATE TRIGGER I_U_CheckPriceRise
+CREATE TRIGGER CheckPriceRise
 ON Production.Product
 AFTER UPDATE
 AS
