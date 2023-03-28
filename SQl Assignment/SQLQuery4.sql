@@ -1,4 +1,3 @@
-
 CREATE FUNCTION Sales.uf_getProducts(@SalesOrderID int, @CurrencyCode nchar(3) ,@CurrencyRateDate datetime)
 	RETURNS TABLE 
 AS
@@ -15,5 +14,5 @@ AS
 		AND scr.CurrencyRateDate = @CurrencyRateDate
 GO
 
-SELECT *FROM Sales.uf_getProducts(43660,'CNY','2005-07-01 00:00:00.000'); 
+SELECT *FROM Sales.uf_getProducts(43660,'ARS','2005-07-01 00:00:00.000'); 
 
