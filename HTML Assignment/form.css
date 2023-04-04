@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital@1&family=Joan&display=swap');
+* {
+    margin: 0px;
+    padding: 0;
+    font-family:sans-serif;
+  }
+  
+  
+  :root {
+ 
+    --bg-light-black:rgb(40, 37, 37);
+  
+    --bg-green-yellow:white;
+  
+    /* color for border */
+    --b-dark-black:rgba(168,201,68,255);
+  
+    /* color for new wrapper div */
+    --b-light-yellow:#ebf2d3;
+    
+  }
+  .navigation-bar {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    color:white;
+    padding:10px;
+    background-color:#46d7ac;
+  }
+ 
+  .students {
+    display: flex;
+    gap: 10px;
+    height: auto;
+    width: 100%;
+    margin-top:50px;
+    background-color:white;
+    color:black;
+  }
+  
+  .enroll-student {
+   margin-top: 70px;
+    padding-right: 100px;
+    box-sizing: border-box;
+    width: 35%;
+    margin-right: 30px;
+    height: auto;
+    color:black;
+    font-size:18px;
+    font-weight: 700;
+  
+  }
+  
+  #enrolled-students {
+    
+    margin-bottom: 15px;
+    justify-content: center;
+    width: 40%;
+    height: calc(100vh - 70px);
+    overflow:visible;
+    text-align:left;
+    color: black;
+    
+  }
+  
+  .enroll_heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .gender {
+    padding-left: 15px;
+  }
+  
+  .label {
+    display: flex;
+    font-size: 30px;
+  }
+  
+  .form-control {
+    margin-bottom: 16px;
+  }
+  
+  .seperation {
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px 0px var(--bg-#a8c944);
+    border-top: 1px ;
+    width: 3px;
+    height: 70vh;
+    margin-top: 70px;
+    background: #45d2ab;
+    margin-left: 2.5%;
+  }
+
+  @media screen and (max-width: 768px) 
+  {
+    hr.seperationr{
+      height: 0;
+    }
+  }
+  
+  .sectionHeading {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-green-yellow);
+    color: rgb(6, 6, 6);
+    box-sizing: border-box;
+    border: solid 2px var(--b-dark-black);
+    font-weight:lighter;
+  }
+  
+  .sectionHeading > p {
+    padding: 10px 12px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    font-weight: lighter;
+  }
+  
+  .description {
+    box-sizing: border-box;
+    border-right: solid 2px var(--b-#a8c944);
+    margin-bottom: 0;
+    background-color: rgba(168,201,68,255);
+    width: 70%;
+    
+  }
+  
+  .Image {
+    margin-bottom: 0;
+    width: 30%;
+    background-color: rgba(168,201,68,255);
+  }
+  
+  .infoText {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .userName {
+    font-weight: lighter;
+  }
+  
+  .wrapper {
+    box-sizing: border-box;
+    display: flex;
+    overflow-x:hidden ;
+    align-items: center;
+    width: 100%;
+    height: 130px;
+    justify-content: space-between;
+    border: solid 2px var(--b-dark-black);
+    border-top: none;
+    animation: fadeIn 2s;
+    position: relative;
+    font-weight:700;
+  
+  }
+  
+  .userDeleteBtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    transform: rotate(45deg);
+    display: none;
+  }
+ 
+  @media screen and (max-width: 768px) {
+    button.userDeleteBtn {
+      display:block;
+    }
+    
+  }
+  @media (max-width: 768px){
+    .enroll-student{
+      margin-right: 0%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .wrapper:hover .userDeleteBtn {
+    display: block;
+  }
+  
+  .wrapper:nth-child(odd) {
+    background-color: rgb(255, 255, 255);
+  }
+  .wrapper:nth-child(even) {
+    background-color: var(--b-light-yellow);
+  }
+  
+  .textInfoContainer {
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+    border-right: solid 2px var(--b-dark-black);
+    padding: 10px;
+  }
+  
+  .imageContainer {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .userImage {
+    height: 120px;
+    width: 190px;
+    
+  }
+  
+  .fadeIn {
+    animation: fadeIn 2s;
+  }
+  
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  footer{
+    border: 1px solid ;
+    text-align: center;
+    background-color: #45d2ab;
+    padding-top: 2px;
+  }
+
+/*End 0f css*/
