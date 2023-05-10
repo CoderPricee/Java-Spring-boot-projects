@@ -18,7 +18,6 @@ public class Main extends Thread {
 
 	public void run() {
 		FileName = new LinkedList<String>();
-
 		for (final File fileEntry : folder.listFiles()) {
 
 			if (fileEntry.getName().contains(".csv"))

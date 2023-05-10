@@ -15,13 +15,14 @@ import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/Login")
 public class Login extends HttpServlet {
-	
+
 	protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
 	 
 		String uname=request.getParameter("uname");
 		String pass=request.getParameter("pass");
 		
 		LoginDao dao = new LoginDao();
+		System.out.println("username is "+uname);
 		
 		if(dao.checkLogin(uname, pass))
 		{

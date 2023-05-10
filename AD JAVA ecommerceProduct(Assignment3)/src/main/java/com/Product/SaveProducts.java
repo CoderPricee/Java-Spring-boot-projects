@@ -41,7 +41,7 @@ public class SaveProducts extends HttpServlet {
 
 			String imageFileName = file.getSubmittedFileName(); // get selected image file name
 
-			String uploadPath = "C:\\Users\\sonaliprajapati\\eclipse-workspace\\ecommerceProduct\\src\\main\\webapp\\img\\"
+			String uploadPath = "C:\\Users\\prabhavgoel\\Desktop\\New folder\\prabhav-goel\\AD JAVA ecommerceProduct(Assignment3)\\src\\main\\webapp\\img"
 					+ imageFileName; // upload path where we have to upload our actual image
 
 			byte[] data;
