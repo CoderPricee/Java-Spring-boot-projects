@@ -23,7 +23,7 @@ public class AuthorService {
 		String inline = "";
 
 		try {
-			URL url = new URL("http://localhost:8052/App2Assignment5/author");
+			URL url = new URL("http://localhost:8280/App2Assignment5/author");
 			// Parse URL into HttpURLConnection in order to open the connection in order to
 			// get the JSON data
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();

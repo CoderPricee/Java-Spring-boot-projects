@@ -24,7 +24,7 @@ public class BookService {
 		String inline = "";
 
 		try {
-			URL url = new URL("http://localhost:8052/App2Assignment5/book");
+			URL url = new URL("http://localhost:8280/App2Assignment5/book");
 			// Parse URL into HttpURLConnection in order to open the connection in order to
 			// get the JSON data
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -95,7 +95,7 @@ public class BookService {
 		String inline = "";
 
 		try {
-			URL url = new URL("http://localhost:8052/App2Assignment5/book/" +bookcode);
+			URL url = new URL("http://localhost:8280/App2Assignment5/book/" +bookcode);
 			// Parse URL into HttpURLConnection in order to open the connection in order to
 			// get the JSON data
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -123,7 +123,7 @@ public class BookService {
 	}
 	public void saveBook(Book book,String method) {
 
-		String query_url = "http://localhost:8052/App2Assignment5/book";
+		String query_url = "http://localhost:8280/App2Assignment5/book";
 		String json = "{\"bookCode\":"+book.getBookCode()+",\"bookName\":\""+book.getBookName()+"\",\"author\":\""+book.getAuthor()+"\",\"addedOn\":\""+book.getAddedOn()+"\"}";
 		try {
 		URL url = new URL(query_url);
